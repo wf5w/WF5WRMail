@@ -82,3 +82,5 @@ or conversely, if you want the servers to come up, then remove the mailonly file
 
 ***$ rm -f mailonly***  
 ***$ sudo reboot***
+
+When using the pat winlink server, that one way to connect is telnet. Telnet is not available, unless you have internet. I have found that the easiest way to get ethernet is to connect an ethernet cable into a router, and internet becomes available.
