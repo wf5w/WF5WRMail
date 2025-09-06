@@ -68,9 +68,10 @@ raspberry pi hotspot network adddress: 10.42.0.1
 
 ssh is enabled, and the user and password are pre defined below: 
 
-==**It is highly recommended, that you ssh into the pi, and then change the passwd before taking this out to the field**==
+**It is highly recommended, that you ssh into the pi, and then change the passwd before taking this out to the field**
 
 raspberry pi user: pi
+
 pi password: 123
 
 when you take this to the field, you may not want to have the webadmin and pat winlink up for anyone to connect into so if the file named mailonly is found in the home directory, then the webadmin and pat winlink servers will not be started. You do this by logging into the pi with ssh, and  
