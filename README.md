@@ -78,10 +78,15 @@ pi password: 123
 when you take this to the field, you may not want to have the webadmin and pat winlink up for anyone to connect into so if the file named mailonly is found in the home directory, then the webadmin and pat winlink servers will not be started. You do this by logging into the pi with ssh, and  
 
 ***$ touch mailonly***
-
+  
 or conversely, if you want the servers to come up, then remove the mailonly file
 
 ***$ rm -f mailonly***  
 ***$ sudo reboot***
 
+If you would like to change the header image on the RMail page:
+1. Create a png image of your own.
+2. in the /home/pi/bin/http/ directory, replace header.png with your own png file. Make sure the resulting file is named header.png
+
+ 
 When using the pat winlink server, that one way to connect is telnet. Telnet is not available, unless you have internet. I have found that the easiest way to get ethernet is to connect an ethernet cable into a router, and internet becomes available.
