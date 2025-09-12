@@ -24,19 +24,37 @@ https://drive.google.com/file/d/1YxqiBMXuOCDR8oeldDiT_R88plCjIHtp/view?usp=shari
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
 
-for linux: for example:
+##linux: for example:
+
+if your SD-Card (or USB stick) is /dev/xxx1 and /dev/xxx2
+
 $ umount /dev/xxx1
 $ umount /dev/xxx2
 $ sudo dd bs=16M status=progress if=WF5WRmail-x.x.x.img of=/dev/xxx
 
 4. eject /dev/xxx
+
+## Windows:
+
+Download Etcher, or some other SD Card image burning tool
+and use it to burn the image to the SD-Card
+
+## Mac:
+
+Download Etcher, and use it to burn the SD Card
+
+## Now complete the steps below:
+
 5. connect the new disk to the raspberry pi
-6.  the pi will bootup, and run the extend file system routine, then reboot
+6. the pi will bootup, and run the extend file system routine, then reboot
 7. when the pi is up for good, connect to it by using the Rmail wifi SSID (this will change after the Setup script runs)
 8. now you are connected to the RMail SSID, you can get to the pi at 10.42.0.1
-9. bring up the webadmin, and do the Set Date and Time, then the Setup first time
-10. After the setup, your wifi SSID will be    ```RMail-<callsign>```
-11. You can then use the RMail email (10.42.0.1:4000)
+9. bring up the webadmin ( http://10.42.0.1:10000 ), and do the Set Date and Time
+10. then do the Setup first time
+11. After the setup, your wifi SSID will be    ```RMail-<callsign>```
+12. You can then use the RMail email ( http://10.42.0.1:4000 )
+
+See the details below:
 
 # First Steps
 
@@ -46,7 +64,7 @@ Before you can use the RMail system, as a Ham you need to set your parameters fo
 
 You can use the webadmin server to easily do it for you. 
 
-The first time you do the setup, you need to set the Date and Time. This is because the Raspberry Pi does not have a way to keep up with time when it is not in use. Then click on the Setup first time.
+The first time you do the setup, you need to set the Date and Time. This is because the Raspberry Pi does not have a way to keep up with time when it is not in use, and it won't be connected to the internet to get the time. Then click on the Setup first time.
 
 You only need to click on the Setup first time, one time. Once those parameters are set, then RMail is ready to go.
 
@@ -57,7 +75,9 @@ click the submit button, which posts the message the the pat winlink's outbox, f
 
 Once the RMail server is up, it will be up for anyone to use.
 
-All the user needs to do, is connect the RMail SSID, and use a web browser to point to the RMail server, at 10.42.0.1:4000 and they can enter an email.
+All the user needs to do, is connect the RMail SSID, and use a web browser to point to the RMail server, at 10.42.0.1:4000 and they can enter an email. There is a document named WF5WRMail_Public_Instructions.odt which should help.
+
+If you want, you can also bring an hdmi monitor and keyboard, and connect to the RMail web page that way.
 
 # notes
 
