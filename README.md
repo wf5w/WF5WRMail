@@ -19,7 +19,7 @@ There are 3 servers:
 
 1. Get the starter Raspberry Pi image from:
    
-https://drive.google.com/file/d/1lMiqr6Bcwfou84TJyA0beRXUlve0M6bW/view?usp=sharing
+https://drive.google.com/file/d/1YxqiBMXuOCDR8oeldDiT_R88plCjIHtp/view?usp=sharing
 
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
