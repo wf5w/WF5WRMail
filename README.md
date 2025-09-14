@@ -118,3 +118,36 @@ If you would like to change the header image on the RMail page:
 Please note, that the pat winlink config file, is not the stock config file, it has been changed to best run on the RMail system. One notable change is that the ARDOP port has been changed to port 8200 instead of 8515.
 
 When using the pat winlink server, that one way to connect is telnet. Telnet is not available, unless you have internet. I have found that the easiest way to get ethernet is to connect an ethernet cable into a router, and internet becomes available.
+
+### Example procedure to copy your pi's posted email to your own pat winlink system
+```
+# how to copy all the outbox files to your local machine from the pi
+# assume your callsign is WF5W on both your pi, and the local system
+
+local> ssh pi@10.42.0.1
+
+pi> pat env | grep -e 'MAILBOX_PATH|MYCALL'
+PAT_MYCALL="WF5W"
+PAT_MAILBOX_PATH="/home/pi/.local/share/pat/mailbox"
+
+pi> cd ~/.local/share/pat/mailbox/WF5W/out
+
+pi> zip ~/currentpatoutbox.zip *.b2f
+pi> exit
+
+
+# back at your system: copy the zip file you created
+
+local> scp pi@10.42.0.1:currentpatoutbox.zip .
+
+# now unzip the b2f files in your local machine's pat winlink outbox
+
+local> pat env | grep -e 'MAILBOX_PATH|MYCALL'
+PAT_MYCALL="WF5W"
+PAT_MAILBOX_PATH="/home/wf5w/.local/share/pat/mailbox"
+
+local> cd ~/.local/share/pat/mailbox/WF5W/out
+unzip ~/currentpatoutbox.zip 
+
+# you have now added all the files to your outbox, use pat winlink to send them
+```
