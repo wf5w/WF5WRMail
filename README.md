@@ -11,9 +11,9 @@ A good ham,  will look at the emails that were posted, to see if there is any il
 
 There are 3 servers:
 
-**RMail server**  - 10.42.0.1:4000 
-**Pat Winlink** - 10.42.0.1:5000 
-**Webadmin server** - 10.42.0.1:10000 
+- **RMail server**  - 10.42.0.1:4000 
+- **Pat Winlink** - 10.42.0.1:5000 
+- **Webadmin server** - 10.42.0.1:10000 
 
 # Installation
 
@@ -24,7 +24,7 @@ https://drive.google.com/file/d/1YxqiBMXuOCDR8oeldDiT_R88plCjIHtp/view?usp=shari
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
 
-##linux: for example:
+## linux: for example:
 
 if your SD-Card (or USB stick) is /dev/xxx1 and /dev/xxx2
 
@@ -89,20 +89,27 @@ raspberry pi hotspot network adddress: 10.42.0.1
 
 ssh is enabled, and the user and password are pre defined below: 
 
+- raspberry pi user: pi
+- pi password: 123
+
+
 **It is highly recommended, that you ssh into the pi, and then change the passwd before taking this out to the field**
 
-raspberry pi user: pi
+**after you have done the Webadmin Server steps ( Set Date Time, and Setup First Time), you may want to disable the Webadmin server and pat winlink server, after a reboot, when you take this to the field.**
 
-pi password: 123
+This is done by the prescence of a file in the home directory, named **mailonly**
 
-when you take this to the field, you may not want to have the webadmin and pat winlink up for anyone to connect into so if the file named mailonly is found in the home directory, then the webadmin and pat winlink servers will not be started. You do this by logging into the pi with ssh, and  
-
-***$ touch mailonly***
+if the file named mailonly is found in the home directory, then the webadmin and pat winlink servers will not be started. You do this by logging into the pi with ssh, and  create the file.
   
 or conversely, if you want the servers to come up, then remove the mailonly file
 
-***$ rm -f mailonly***  
-***$ sudo reboot***
+```
+ssh pi@10.42.0.1
+pi> cd
+pi> touch mailonly      # or rm mailonly
+pi> sudo reboot
+```
+
 
 If you would like to change the header image on the RMail page:
 1. Create a png image of your own.
