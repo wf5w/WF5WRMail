@@ -90,12 +90,12 @@ raspberry pi hotspot network adddress: 10.42.0.1
 ssh is enabled, and the user and password are pre defined below: 
 
 - raspberry pi user: pi
-- pi password: 123
+- pi password: rpi
 
 
 **It is highly recommended, that you ssh into the pi, and then change the passwd before taking this out to the field**
 
-**after you have done the Webadmin Server steps ( Set Date Time, and Setup First Time), you may want to disable the Webadmin server and pat winlink server, after a reboot, when you take this to the field.**
+**after you have done the Webadmin Server steps ( Set Date Time, and Setup First Time ), you may want to disable the Webadmin server and pat winlink server, after a reboot, when you take this to the field.**
 
 This is done by the prescence of a file in the home directory, named **mailonly**
 
@@ -122,7 +122,7 @@ When using the pat winlink server, that one way to connect is telnet. Telnet is 
 ### Example procedure to copy your pi's posted email to your own pat winlink system
 ```
 # how to copy all the outbox files to your local machine from the pi
-# assume your callsign is WF5W on both your pi, and the local system
+# my callsign is WF5W on both your raspberry pi, and the local system, your callsign will be different, and your local home directory will be different. These commands are for example only. Please subsitute your directories accordingly. 
 
 local> ssh pi@10.42.0.1
 
