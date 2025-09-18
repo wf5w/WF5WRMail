@@ -117,6 +117,8 @@ If you would like to change the header image on the RMail page:
 1. Create a png image of your own.
 2. in the /home/pi/bin/http/ directory, replace header.png with your own png file. Make sure the resulting file is named header.png
 
+If you would like to change the text that is appended to each and every message in the RMail server, you can edit the /home/pi/bin/http/postmessage.txt file to suit your needs.
+
 Please note, that the pat winlink config file, is not the stock config file, it has been changed to best run on the RMail system. One notable change is that the ARDOP port has been changed to port 8200 instead of 8515.
 
 When using the pat winlink server, that one way to connect is telnet. Telnet is not available, unless you have internet. I have found that the easiest way to get ethernet is to connect an ethernet cable into a router, and internet becomes available.
