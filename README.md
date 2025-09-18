@@ -19,7 +19,7 @@ There are 3 servers:
 
 1. Get the starter Raspberry Pi image from:
    
-https://drive.google.com/file/d/1At32dDrSKjoTBIVTyWDJ_tH5w2UKLtwj/view?usp=sharing
+https://drive.google.com/file/d/17dkE6mvn4-8j9nHbbpnOg9Wm8Dx6iO5J/view?usp=sharing
 
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
@@ -79,7 +79,7 @@ All the user needs to do, is connect the RMail SSID, and use a web browser to po
 
 If you want, you can also bring an hdmi monitor and keyboard, and connect to the RMail web page that way.
 
-# notes
+# Notes
 
 The Raspberry Pi comes up as a hotspot. This system is designed to collect emails from any user who connects to the hotspot.
 
@@ -94,6 +94,8 @@ ssh is enabled, and the user and password are pre defined below:
 
 
 **It is highly recommended, that you ssh into the pi, and then change the passwd before taking this out to the field**
+
+**Version 2.4.1: There is now a link to set the account password on the webadmin server**
 
 **after you have done the Webadmin Server steps ( Set Date Time, and Setup First Time ), you may want to disable the Webadmin server and pat winlink server, after a reboot, when you take this to the field.**
 
