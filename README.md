@@ -24,22 +24,24 @@ https://drive.google.com/file/d/17dkE6mvn4-8j9nHbbpnOg9Wm8Dx6iO5J/view?usp=shari
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
 
-## linux: for example:
+4. ### Burning
+#### linux: for example:
 
 if your SD-Card (or USB stick) is /dev/xxx1 and /dev/xxx2
 
-$ umount /dev/xxx1
+```$ umount /dev/xxx1
 $ umount /dev/xxx2
 $ sudo dd bs=16M status=progress if=WF5WRmail-x.x.x.img of=/dev/xxx
 
-4. eject /dev/xxx
+eject /dev/xxx
+```
 
-## Windows:
+#### Windows:
 
 Download Etcher, or some other SD Card image burning tool
 and use it to burn the image to the SD-Card
 
-## Mac:
+#### Mac:
 
 Download Etcher, and use it to burn the SD Card
 
