@@ -21,6 +21,8 @@ There are 3 servers:
 
 https://drive.google.com/file/d/1d9fqQ8LDX25kEUWhSRI_9qJ1u6mPSfGs/view?usp=sharing   
 
+currently Rmail is at Version 2.4.2
+
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
 
