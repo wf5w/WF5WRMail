@@ -133,8 +133,8 @@ When using the pat winlink server, that one way to connect is telnet. Telnet is 
 ```
 # how to copy all the outbox files to your local machine from the pi
 # my callsign is WF5W on both your raspberry pi, and the local system, your
-callsign will be different, and your local home directory will be different.
-These commands are for example only. Please subsitute your directories accordingly. 
+# callsign will be different, and your local home directory will be different.
+# These commands are for example only. Please subsitute your directories accordingly. 
 
 local> ssh pi@10.42.0.1
 
