@@ -119,7 +119,9 @@ pi> sudo reboot
 
 If you would like to change the header image on the RMail page:
 1. Create a png image of your own.
-2. in the /home/pi/bin/http/ directory, replace header.png with your own png file. Make sure the resulting file is named header.png
+2. in the /home/pi/bin/http/ directory, replace header.png with your own png file.
+
+Make sure the resulting file is named header.png
 
 If you would like to change the text that is appended to each and every message in the RMail server, you can edit the /home/pi/bin/http/postmessage.txt file to suit your needs.
 
@@ -130,7 +132,9 @@ When using the pat winlink server, that one way to connect is telnet. Telnet is 
 ### Example procedure to copy your pi's posted email to your own pat winlink system
 ```
 # how to copy all the outbox files to your local machine from the pi
-# my callsign is WF5W on both your raspberry pi, and the local system, your callsign will be different, and your local home directory will be different. These commands are for example only. Please subsitute your directories accordingly. 
+# my callsign is WF5W on both your raspberry pi, and the local system, your
+callsign will be different, and your local home directory will be different.
+These commands are for example only. Please subsitute your directories accordingly. 
 
 local> ssh pi@10.42.0.1
 
