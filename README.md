@@ -1,5 +1,5 @@
 # WF5WRMail
-Remote Email system, using Pat Winlink under the hood
+WF5W Remote Email system, using Pat Winlink under the hood
 
 # Introduction
 
@@ -19,9 +19,9 @@ There are 3 servers:
 
 1. Get the starter Raspberry Pi image from:
 
-https://drive.google.com/file/d/1d9fqQ8LDX25kEUWhSRI_9qJ1u6mPSfGs/view?usp=sharing   
+https://drive.google.com/file/d/1ygn3Yu2vSiwVjvSXnVHZSq4loTUdqW44/view?usp=sharing   
 
-currently Rmail is at Version 2.4.2
+currently Rmail is at Version 2.5.0
 
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
