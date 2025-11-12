@@ -1,6 +1,12 @@
 # WF5WRMail
 WF5W Remote Email system, using Pat Winlink under the hood
 
+After installation, just just put the SD Card into your Raspberry Pi, and turn it on.
+
+The Rmail system will come up with its own hotspot. The SSID is initially named "Rmail". You just connect your wifi to "Rmail" and connect your web browser to http://10.42.0.1
+
+You will after 5 seconds be connected to the RMail server.
+
 # Introduction
 
 The RMail system uses pat winlink under the hood, and facilitates, the rapid, and easy way to collect email from anyone, on their own cellphone, tablet, or computer. The procedure for doing so, will be outlined below.
@@ -9,8 +15,9 @@ When the user connects to the hotspot and uses a web browser to bring up the RMa
 
 A good ham,  will look at the emails that were posted, to see if there is any illegal messages, before doing the connection to the winlink gateway (by however means).
 
-There are 3 servers:
+There are 4 servers:
 
+- **Rmail Landing Page** - 10.42.0.1
 - **RMail server**  - 10.42.0.1:4000 
 - **Pat Winlink** - 10.42.0.1:5000 
 - **Webadmin server** - 10.42.0.1:10000 
@@ -19,9 +26,9 @@ There are 3 servers:
 
 1. Get the starter Raspberry Pi image from:
 
-https://drive.google.com/file/d/1bf2dSD9br9X84wRaAC0Gq5A5REqRPU3R/view?usp=sharing
+https://drive.google.com/file/d/1wvvVQNE2hp4C0t8ua61bh7PY3-DYm1y2/view?usp=sharing
 
-currently Rmail is at Version 2.5.1
+currently Rmail is at Version 2.5.2
 
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
