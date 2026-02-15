@@ -26,9 +26,9 @@ There are 4 servers:
 
 1. Get the starter Raspberry Pi image from:
 
-https://drive.google.com/file/d/1wvvVQNE2hp4C0t8ua61bh7PY3-DYm1y2/view?usp=sharing
+https://drive.google.com/file/d/1blk0UFASYAowZnq2D5qV4r6e02YGiol4/view?usp=sharing
 
-currently Rmail is at Version 2.5.2
+currently Rmail is at Version 2.5.3
 
 2. unzip the file, and note the name of the image
 3. burn the image to a micro-SD card or a USB Disk, or a USB Stick
