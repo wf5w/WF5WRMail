@@ -92,6 +92,19 @@ If you want, you can also bring an hdmi monitor and keyboard, and connect to the
 
 # Notes
 
+## Enable password-less ssg
+
+On you local system:
+```
+$ ssh-keygen -t rsa
+#    IMPORTANT: just press the enter key for all the prompts!!
+
+$ cd ~/.ssh
+$ ssh-copy-id -i id_rsa.pub pi@10.42.0.1
+# (enter the raspberry pi password)
+```
+
+
 The Raspberry Pi comes up as a hotspot. This system is designed to collect emails from any user who connects to the hotspot.
 
 raspberry pi auto hotspot SSID: begins with RMail
@@ -170,3 +183,11 @@ unzip ~/currentpatoutbox.zip
 
 # you have now added all the files to your outbox, use pat winlink to send them
 ```
+i
+
+## Copy mail from the raspberry pi to your local host
+
+Although you can use the raspberry pi to actually send the mail you collected, there is an option to copy the files over to your local system, to send them via the pat winlink system there.
+
+Look in the github repository for the files transferOutbox and transferOutbox.py. These will facilitate that.
+
