@@ -92,7 +92,7 @@ If you want, you can also bring an hdmi monitor and keyboard, and connect to the
 
 # Notes
 
-## Enable password-less ssg
+## Enable password-less ssh
 
 On you local system:
 ```
