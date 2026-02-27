@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+# if you supply no arguments to this script, a usage statement will be printed, and then exit
+#
+# for this to work:
+#   1. ip address of the remote pi is known
+#   2. remote pat winlink callsign is known
+#   3. local pat winlink callsign is known
+#
+#   it is possible that the local and remote callsigns could be different
+#   but not usually.
+#
+#   for this to work best, create a ssh id,
+#   and do a ssh-copyid to the remoteserver
+#
+#   if using the raspberry pi image WF5WRmail, then use -d for the default values
+#   if useing the WF5WRmail system, the remote pi user's password is "rpi"
+#
+#       $ ssh-keygen -t rsa
+#       IMPORTANT: just press the enter key for all the prompts!!
+#
+#       $ cd ~/.ssh
+#       $ ssh-copy-id -i id_rsa.pub pi@10.42.0.1
+
+if [[ -z $1 ]]; then
+  echo "usage: transferOutbox [ -d | remote-ip-address remote-user remote-callsign local-callsign ]"
+  exit 0
+fi
+
+# if you want to be able to use the -d option, edit this file, and replace the NOCALL with the callsigns
+# used for both your local and remote (pi) winlink callsigns
+# otherwise, you can just put in the 4 needed arguments on the command line.
+
+if [[ "$1" == "-d" ]]; then
+  # this is the default if you do a -d
+  remoteip='10.42.0.1'
+  remoteuser=pi
+  remotecallsign='NOCALL'
+  localcallsign='NOCALL'
+else
+  remoteip=$1
+  remoteuser=$2
+  remotecallsign=$(echo $3 | tr 'a-z' 'A-Z')
+  localcallsign=$(echo $4 | tr 'a-z' 'A-Z')
+fi
+
+echo "parameters:"
+echo "  remote ip:       $remoteip"
+echo "  remote user:     $remoteuser"
+echo "  remote callsign: $remotecallsign"
+echo "  local calsign:   $localcallsign"
+
+cd $HOME/.local/share/pat/mailbox/${localcallsign}/out/
+
+nfiles=$(ssh ${remoteuser}@${remoteip} "ls -1 ~/.local/share/pat/mailbox/${remotecallsign}/out/" | wc -l)
+
+if [[ $nfiles == "0" ]]; then
+  echo no remote files found
+else
+  echo found $nfiles files, copying ...
+  scp ${remoteuser}@${remoteip}:.local/share/pat/mailbox/${remotecallsign}/out/* .
+fi
