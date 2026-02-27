@@ -92,7 +92,7 @@ If you want, you can also bring an hdmi monitor and keyboard, and connect to the
 
 # Notes
 
-## Enable password-less ssh
+### Enable password-less ssh
 
 On you local system:
 ```
@@ -104,6 +104,7 @@ $ ssh-copy-id -i id_rsa.pub pi@10.42.0.1
 # (enter the raspberry pi password)
 ```
 
+### Other
 
 The Raspberry Pi comes up as a hotspot. This system is designed to collect emails from any user who connects to the hotspot.
 
@@ -191,3 +192,10 @@ Although you can use the raspberry pi to actually send the mail you collected, t
 
 Look in the github repository for the files transferOutbox and transferOutbox.py. These will facilitate that.
 
+To use the transferOutbox programs:
+
+$ transferOutbox.py remote-ip-address remote-user remote-callsign local-callsign 
+
+for instance: transferOutbox.py 10.42.0.1 pi WF5W WF5W-15
+
+(pat winlink is setup with a different mailbox on the local machine as opposed to the pi)
