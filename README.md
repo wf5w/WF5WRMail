@@ -26,7 +26,7 @@ There are 4 servers:
 
 1. Get the starter Raspberry Pi image
 
-https://drive.google.com/file/d/1lT99nzWAs0ks1fVIlR1-JqmDtLkMpktZ/view?usp=sharing
+https://drive.google.com/file/d/1blk0UFASYAowZnq2D5qV4r6e02YGiol4/view?usp=drive_link
 
 currently Rmail is at Version 2.5.3P1
 
